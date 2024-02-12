@@ -1,0 +1,48 @@
+trasnform script ps1 into .exe file : 
+
+Transformer un script PowerShell en Éxecutable
+Tout d’abord ouvrez en tant qu’administrateur l’outil intégré à Windows « IExpress »
+
+
+Pour commencer, sélectionner « Create new Self Extraction Directive file », puis sélectionnez « Create new Self Extraction Detective file ». Enfin nommer le paquet comme bon vous semble, il n’y a pas grande importance.
+
+
+
+
+Pour les deux prochaines options, je laisse par defaut. Ensuite ajoutez tout d’abord votre script dans les packaged files. Attention à aussi ajouter les dépenses de vos scripts s’il y en a.
+
+
+
+
+Second point à faire attention dans « Install Program on Launch » insérez la commande suivante :
+
+powershell.exe -ExecutionPolicy Bypass -File Filename.ps1
+Veillez à remplacer « Filename.ps1 » par le nom du script à exécuter. Comme dit au début de l’article, le mien se nomme « change-hostname.ps1 » ce qui donne
+
+powershell.exe -ExecutionPolicy Bypass -File change-hostname.ps1
+Une fois la commande insérée, en continu à laisser les options par défaut.
+
+
+
+
+Ensuite dernier point important, renseigner où sera enregistré le package en .exe et cocher les deux cases du dessous.
+
+Une option intéressante dans le cas du script avec lequel je fais le tuto, est de pouvoir demander à l’utilisateur de redémarrer sa machine, en effet mon script étant fait pour renommer une machine, un redémarrage est nécessaire.
+
+Sur la page « Save Self Extraction » vous pouvez sauvegarder un récapitulatif au format .SED du package.
+
+
+
+
+Pour la suite vous connaissez.. suivant, suivant, suivant ……
+
+
+
+À la fin de l’opération, vous trouverez le .exe là où vous l’avez enregistré 😉
+
+
+Vous pouvez bien sur comme tout .exe, le lancer en tant qu’administrateur avec un clic droit !
+
+ohmyzsh: https://medium.com/@alllexsm/how-to-install-z-shell-zsh-on-cygwin-dd9ee380d783
+
+Script windows pour ouvrir cygwin avec ohmyzsh = C:\cygwin64\bin\mintty.exe -i /Cygwin-Terminal.ico /bin/zsh --login

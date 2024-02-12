@@ -1,0 +1,18 @@
+dl cygwin for windows : https://cygwin.com/index.html
+
+!! I suggest u to install development packages after installing Cygwin:
+1 . Launch the Cygwin installer:
+Open the Windows Start menu and search for "Cygwin Setup".
+Launch the "Cygwin Setup.exe" application.
+2 . Select the development packages:
+Click on the "Categories" button in the top left corner and expand the "Development" category (if u want to install ALL U NEED FOR DEV select the button next to default and select install then restart your term)
+Browse and check the boxes of the packages you want to install, for example "gcc-core", "g++", "make", etc.
+You can also search and install other development packages depending on your needs.
+3 . Download and install the packages:
+Click on the "Next" button to download and install the selected packages.
+4 . Restart your Cygwin terminal:
+Once the installation is complete, restart your Cygwin terminal for the changes to take effect.
+Verify the installation:
+You can verify the installation by running the following command in your Cygwin terminal:
+gcc --version
+If the command executes successfully, it will display the version of GCC installed.
